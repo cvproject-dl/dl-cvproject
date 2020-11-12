@@ -137,3 +137,12 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 .DS_Store
+
+
+#pycharm
+.idea/
+
+
+#Models
+indresnet34classifier.pth
+sfresnet34classifier.pth
