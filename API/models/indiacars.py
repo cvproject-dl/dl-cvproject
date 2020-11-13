@@ -19,10 +19,9 @@ class Indiacars(db.Model):
         return resp
 
     @classmethod
-    def get_items(cls, page):
+    def __paginate(cls, all_items, page):
         if page is None:
             page = 1
-        all_items = cls.query.all()
         results = list()
         start = (page - 1) * 10
         last_idx = len(all_items) - 1
@@ -37,6 +36,29 @@ class Indiacars(db.Model):
         return results
 
     @classmethod
+    def get_items(cls, page):
+        """
+        :param page: page (int) for pagination
+        :return: list of items with id ,name & image , 10 items per page
+        """
+        all_items = cls.query.all()
+        return cls.__paginate(all_items, page)
+
+    @classmethod
     def get_item_by_id(cls, idno):
+        """
+        :param idno: id parameter (to search)
+        :return: item matching the id
+        """
         item = cls.query.filter_by(id=idno).first()
         return cls.__item_to_json(item)
+
+    @classmethod
+    def search_by_name(cls, search_term, page):
+        """
+        :param search_term: car name to search
+        :param page: page (int) for pagination
+        :return:  list of items with id ,name & image , 10 items per page
+        """
+        items = cls.query.filter(cls.car_name.like('%' + search_term + '%')).all()
+        return cls.__paginate(items, page)

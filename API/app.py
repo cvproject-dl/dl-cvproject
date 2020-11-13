@@ -4,6 +4,7 @@ from flask_restful import Api
 from models.initdb import db
 from resources.predict import Predict
 from resources.cars import Cars
+from resources.root import Root
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///car.db'
@@ -15,6 +16,7 @@ api = Api(app=app)
 # initialize database
 db.init_app(app)
 
+api.add_resource(Root, '/')
 api.add_resource(Predict, '/predict')
 api.add_resource(Cars, '/cars')
 

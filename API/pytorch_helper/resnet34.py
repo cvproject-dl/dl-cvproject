@@ -8,6 +8,11 @@ from .constants import SFCARS_PARAM, INDCARS_PARAM
 
 
 def load_model(checkpoint_path, chkpt_model):
+    f"""
+    :param checkpoint_path: path to the saved model
+    :param chkpt_model: model name (stanford cars | indian cars) ({SFCARS_PARAM}/{INDCARS_PARAM})
+    :return: 
+    """
     checkpoint = torch.load(checkpoint_path)
 
     model = models.resnet34(pretrained=True)
@@ -26,6 +31,12 @@ def load_model(checkpoint_path, chkpt_model):
 
 
 def predict(fileloc, model, chkpt_model):
+    f"""
+     :param fileloc: path to the image
+     :param model: pass model after loading
+     :param chkpt_model: model name (stanford cars | indian cars) ({SFCARS_PARAM}/{INDCARS_PARAM})
+     :return: 
+    """
     model.eval()
 
     # transforms for the input image
