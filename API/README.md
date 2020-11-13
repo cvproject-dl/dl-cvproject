@@ -47,7 +47,7 @@ curl -F 'image=@/Users/akshay/Desktop/hummer.jpg' -F 'model=sfcars'  http://127.
           "name": "HUMMER H2 SUT Crew Cab 2009",
           "image": "https://carimage.netlify.app/06246.jpg"
         },
-        [-----------] 
+        
       ],
       "status": 200
 	}
@@ -86,7 +86,6 @@ curl 'http://127.0.0.1:5000/cars?model=indcars&search=maruti&page=2'
       "name": "Maruti Suzuki SX4",
       "image": "https://carimage.netlify.app/maruti_suzuki_sx4.jpg"
     },
-    [ --------- ]
   ],
   "status": 200
 }
