@@ -27,7 +27,7 @@ class Sfcars(db.Model):
         last_idx = len(all_items) - 1
         print(last_idx)
         if last_idx < start:
-            start = last_idx - 10
+            return results
         total = 0
         for item in all_items[start:]:
             if total >= 10:
@@ -62,4 +62,4 @@ class Sfcars(db.Model):
         :return:  list of items with id ,name & image , 10 items per page
         """
         items = cls.query.filter(cls.car_name.like('%' + search_term + '%')).all()
-        return cls.__paginate(items,page)
+        return cls.__paginate(items, page)

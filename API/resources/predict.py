@@ -15,7 +15,8 @@ class Predict(Resource):
     def post(self):
         parse = reqparse.RequestParser()
         parse.add_argument('image', type=FileStorage, location='files', required=True)
-        parse.add_argument('model', required=True, help=f"Model cannot be blank.{SFCARS_PARAM}/{INDCARS_PARAM}")
+        parse.add_argument('model', required=True, choices=(SFCARS_PARAM, INDCARS_PARAM),
+                           help=f"Model should be '{SFCARS_PARAM}' or '{INDCARS_PARAM}'")
         args = parse.parse_args()
         image_file = args['image']
         model_name = args['model']

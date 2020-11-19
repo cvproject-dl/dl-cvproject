@@ -26,7 +26,7 @@ class Indiacars(db.Model):
         start = (page - 1) * 10
         last_idx = len(all_items) - 1
         if last_idx < start:
-            start = last_idx - 10
+            return results
         total = 0
         for item in all_items[start:]:
             if total >= 10:
