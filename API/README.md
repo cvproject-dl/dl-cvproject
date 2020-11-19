@@ -87,7 +87,8 @@ curl 'http://127.0.0.1:5000/cars?model=indcars&search=maruti&page=2'
       "image": "https://carimage.netlify.app/maruti_suzuki_sx4.jpg"
     },
   ],
-  "status": 200
+  "status": 200,
+  "invalidPage": false
 }
 ```
 
