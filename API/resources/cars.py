@@ -1,7 +1,6 @@
 from flask_restful import Resource, reqparse
 from pytorch_helper.constants import SFCARS_PARAM, INDCARS_PARAM
-from models.sfcars import Sfcars
-from models.indiacars import Indiacars
+from models import Sfcars, Indiacars
 
 
 class Cars(Resource):

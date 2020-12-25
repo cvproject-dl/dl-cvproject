@@ -2,9 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_restful import Api
 from models.initdb import db
-from resources.predict import Predict
-from resources.cars import Cars
-from resources.root import Root
+from resources import Predict, Cars, Root
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///car.db'
