@@ -22,10 +22,10 @@ class Predict(Resource):
         model_name = args['model']
         print(image_file.filename)
         if image_file and self.__allowedfile(image_file.filename):
-            filename = secure_filename(image_file.filename)
-            loc = os.path.join('uploads', filename)
-            image_file.save(loc)
             try:
+                filename = secure_filename(image_file.filename)
+                loc = os.path.join('uploads', filename)
+                image_file.save(loc)
                 if model_name.strip() == SFCARS_PARAM:
                     model = load_model(SF_CARS, chkpt_model=SFCARS_PARAM)
                     res = predict(model=model, fileloc=loc, chkpt_model=SFCARS_PARAM)

@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_restful import Api
-from models.initdb import db
+from dbmodels.initdb import db
 from resources import Predict, Cars, Root
 
 app = Flask(__name__)

@@ -2,9 +2,10 @@ import torch
 import torch.nn as nn
 from torchvision import transforms, models
 import PIL.Image as Image
-from models.sfcars import Sfcars
-from models.indiacars import Indiacars
+from dbmodels.sfcars import Sfcars
+from dbmodels.indiacars import Indiacars
 from .constants import SFCARS_PARAM, INDCARS_PARAM
+from multiclass import get_imgs
 
 
 def load_model(checkpoint_path, chkpt_model):
@@ -30,6 +31,38 @@ def load_model(checkpoint_path, chkpt_model):
     return model
 
 
+def getpred(images, model, chkpt_model):
+    model.eval()
+    print(images)
+    # transforms for the input image
+    loader = transforms.Compose([transforms.Resize((244, 244)),
+                                 transforms.CenterCrop(224),
+                                 transforms.ToTensor(),
+                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    preds = []
+    for image in images:
+        image = loader(image).float()
+        image = torch.autograd.Variable(image, requires_grad=True)
+        image = image.unsqueeze(0)
+        image = image.cpu()
+        output = model(image)
+        p = torch.nn.functional.softmax(output)
+        top_probs, top_labs = p.topk(3)
+        print(top_probs)
+        results = []
+        for (lab, prob) in zip(top_labs[0], top_probs[0]):
+            car_info = dict()
+            if chkpt_model.strip() == SFCARS_PARAM:
+                car_info["car_details"] = Sfcars.get_item_by_id(idno=int(lab) + 1)
+                car_info["confidence"] = float(prob)
+            elif chkpt_model.strip() == INDCARS_PARAM:
+                car_info["car_details"] = Indiacars.get_item_by_id(idno=int(lab) + 1)
+                car_info["confidence"] = float(prob)
+            results.append(car_info)
+        preds.append(results)
+    return preds
+
+
 def predict(fileloc, model, chkpt_model):
     f"""
      :param fileloc: path to the image
@@ -37,25 +70,5 @@ def predict(fileloc, model, chkpt_model):
      :param chkpt_model: model name (stanford cars | indian cars) ({SFCARS_PARAM}/{INDCARS_PARAM})
      :return: 
     """
-    model.eval()
-
-    # transforms for the input image
-    loader = transforms.Compose([transforms.Resize((244, 244)),
-                                 transforms.CenterCrop(224),
-                                 transforms.ToTensor(),
-                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    image = Image.open(fileloc)
-    image = loader(image).float()
-    image = torch.autograd.Variable(image, requires_grad=True)
-    image = image.unsqueeze(0)
-    image = image.cpu()
-    output = torch.exp(model.forward(image))
-    top_probs, top_labs = output.topk(5)
-    results = []
-    for labs in top_labs[0]:
-        if chkpt_model.strip() == SFCARS_PARAM:
-            results.append(Sfcars.get_item_by_id(idno=int(labs) + 1))
-        elif chkpt_model.strip() == INDCARS_PARAM:
-            results.append(Indiacars.get_item_by_id(idno=int(labs) + 1))
-
-    return results
+    images = get_imgs(fileloc)
+    return getpred(images, model, chkpt_model)
