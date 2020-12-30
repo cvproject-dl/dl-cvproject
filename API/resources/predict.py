@@ -28,15 +28,15 @@ class Predict(Resource):
                 image_file.save(loc)
                 if model_name.strip() == SFCARS_PARAM:
                     model = load_model(SF_CARS, chkpt_model=SFCARS_PARAM)
-                    res = predict(model=model, fileloc=loc, chkpt_model=SFCARS_PARAM)
+                    res, total_cars = predict(model=model, fileloc=loc, chkpt_model=SFCARS_PARAM)
                 elif model_name.strip() == INDCARS_PARAM:
                     model = load_model(INDIA_CARS, chkpt_model=INDCARS_PARAM)
-                    res = predict(model=model, fileloc=loc, chkpt_model=INDCARS_PARAM)
+                    res, total_cars = predict(model=model, fileloc=loc, chkpt_model=INDCARS_PARAM)
                 else:
                     os.remove(loc)
                     return {"message": {'error': "Invalid Model Name", 'status': 404}}, 404
                 os.remove(loc)
-                return {'predictions': res, 'status': 200}, 200
+                return {'predictions': res, 'total_cars': total_cars, 'status': 200}, 200
             except Exception as e:
                 return {"message": {'error': f"Internal Server Error {str(e)}", 'status': 500}}, 500
 

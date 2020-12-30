@@ -1,6 +1,7 @@
 import torch
 from PIL import Image
 
+
 def get_imgs(fileloc):
     """
 
@@ -15,13 +16,13 @@ def get_imgs(fileloc):
     result = yolo_model(imgs, size=700)
     cars = process_image(result=result)
     if cars["total_cars"] <= 1:
-        return [img]
+        return [img], 1
     else:
         images = []
         for cr in cars["predictions"]:
             new_img = img.crop((cr["x1"], cr["y1"], cr["x2"], cr["y2"]))
             images.append(new_img)
-        return images
+        return images, cars["total_cars"]
 
 
 def process_image(result):
@@ -46,10 +47,11 @@ def process_image(result):
     listofpredictions = list()
     output = dict()
     cars = 0
+
     for detection in tensr:
         if int(detection[-1]) != 2 and int(detection[-1]) != 7:
             continue
-        if float(detection[-2]) < 0.50:
+        if float(detection[-2]) < 0.30:
             continue
         cars += 1
         car_info = dict()

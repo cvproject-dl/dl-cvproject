@@ -33,7 +33,6 @@ def load_model(checkpoint_path, chkpt_model):
 
 def getpred(images, model, chkpt_model):
     model.eval()
-    print(images)
     # transforms for the input image
     loader = transforms.Compose([transforms.Resize((244, 244)),
                                  transforms.CenterCrop(224),
@@ -48,7 +47,6 @@ def getpred(images, model, chkpt_model):
         output = model(image)
         p = torch.nn.functional.softmax(output)
         top_probs, top_labs = p.topk(3)
-        print(top_probs)
         results = []
         for (lab, prob) in zip(top_labs[0], top_probs[0]):
             car_info = dict()
@@ -70,5 +68,5 @@ def predict(fileloc, model, chkpt_model):
      :param chkpt_model: model name (stanford cars | indian cars) ({SFCARS_PARAM}/{INDCARS_PARAM})
      :return: 
     """
-    images = get_imgs(fileloc)
-    return getpred(images, model, chkpt_model)
+    images, total_cars = get_imgs(fileloc)
+    return getpred(images, model, chkpt_model), total_cars
