@@ -37,9 +37,10 @@ curl  http://127.0.0.1:5000/
  - Supports detection of multiple cars in the image
 ```bash
 curl -F 'image=@/Users/akshay/Desktop/hummer.jpg' -F 'model=sfcars'  http://127.0.0.1:5000/predict
-
 ```
-![hummer.jpg](https://i.pinimg.com/originals/b0/3a/5b/b03a5bb40d7fbc3b48fb07b18a02d7bf.jpg =400x250)
+
+<img src="https://i.pinimg.com/originals/b0/3a/5b/b03a5bb40d7fbc3b48fb07b18a02d7bf.jpg" width=400 height =250>
+
 ```json
 {
   "predictions": [
@@ -81,7 +82,8 @@ curl -F 'image=@/Users/akshay/Desktop/hummer.jpg' -F 'model=sfcars'  http://127.
 ```bash
 curl -F 'image=@/Users/akshay/Desktop/a.jpg' -F 'model=indcars'  http://127.0.0.1:5000/predict
 ```
-![multiple class](https://www.cartoq.com/wp-content/uploads/2019/01/omni-eeco-featured.jpg =400x200)
+<img src="https://www.cartoq.com/wp-content/uploads/2019/01/omni-eeco-featured.jpg" width=400 height =200>
+
 ```json
 {
   "predictions": [
