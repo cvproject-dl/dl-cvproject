@@ -47,9 +47,8 @@ def process_image(result):
     listofpredictions = list()
     output = dict()
     cars = 0
-
     for detection in tensr:
-        if int(detection[-1]) != 2 and int(detection[-1]) != 7:
+        if int(detection[-1]) != 7:
             continue
         if float(detection[-2]) < 0.30:
             continue

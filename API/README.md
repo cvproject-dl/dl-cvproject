@@ -120,32 +120,6 @@ curl -F 'image=@/Users/akshay/Desktop/a.jpg' -F 'model=indcars'  http://127.0.0.
           "name": "Maruti Suzuki Omni",
           "image": "https://carimage.netlify.app/maruti_suzuki_omni.jpg"
         },
-        "confidence": 0.3100835680961609
-      },
-      {
-        "car_details": {
-          "id": 57,
-          "name": "Mahindra Verito",
-          "image": "https://carimage.netlify.app/mahindra_verito.jpg"
-        },
-        "confidence": 0.09555910527706146
-      },
-      {
-        "car_details": {
-          "id": 102,
-          "name": "Tata Indigo eCS",
-          "image": "https://carimage.netlify.app/tata_indigo_ecs.jpg"
-        },
-        "confidence": 0.052263423800468445
-      }
-    ],
-    [
-      {
-        "car_details": {
-          "id": 70,
-          "name": "Maruti Suzuki Omni",
-          "image": "https://carimage.netlify.app/maruti_suzuki_omni.jpg"
-        },
         "confidence": 0.31989696621894836
       },
       {
@@ -166,9 +140,10 @@ curl -F 'image=@/Users/akshay/Desktop/a.jpg' -F 'model=indcars'  http://127.0.0.
       }
     ]
   ],
-  "total_cars": 3,
+  "total_cars": 2,
   "status": 200
 }
+
 ```
 
 
