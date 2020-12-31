@@ -1,6 +1,6 @@
 import json
-from models.sfcars import Sfcars
-from models.initdb import db
+from dbmodels.sfcars import Sfcars
+from dbmodels.initdb import db
 
 def sfcars_seeder(classesloc, image_idx_loc):
     """

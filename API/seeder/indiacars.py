@@ -1,6 +1,6 @@
 import json
-from models.indiacars import Indiacars
-from models.initdb import db
+from dbmodels.indiacars import Indiacars
+from dbmodels.initdb import db
 
 def indiacars_seeder(classesloc):
     """

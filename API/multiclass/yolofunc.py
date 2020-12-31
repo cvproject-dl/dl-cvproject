@@ -44,22 +44,72 @@ def process_image(result):
 
     """
     tensr = result.xyxy[0]
-    listofpredictions = list()
     output = dict()
+    listofpredictions = list()
     cars = 0
     for detection in tensr:
-        if int(detection[-1]) != 7:
+        coordinates = []
+        if int(detection[-1]) != 2 and int(detection[-1]) != 7:
             continue
-        if float(detection[-2]) < 0.30:
+        if float(detection[-2]) < 0.05:
             continue
-        cars += 1
+
         car_info = dict()
-        car_info["x1"] = float(detection[0])
-        car_info["y1"] = float(detection[1])
-        car_info["x2"] = float(detection[2])
-        car_info["y2"] = float(detection[3])
-        car_info["confidence"] = float(detection[4])
-        listofpredictions.append(car_info)
+        coordinates = [float(detection[0]), float(detection[1]), float(detection[2]), float(detection[3])]
+        if process_coord(listofpredictions, coordinates, int(detection[-1])):
+            cars += 1
+            car_info["x1"] = float(detection[0])
+            car_info["y1"] = float(detection[1])
+            car_info["x2"] = float(detection[2])
+            car_info["y2"] = float(detection[3])
+            car_info["confidence"] = float(detection[4])
+            car_info['class'] = int(detection[-1])
+            listofpredictions.append(car_info)
     output["predictions"] = listofpredictions
     output["total_cars"] = cars
     return output
+
+
+def process_coord(listofpredictions, coordinates, car_class):
+    for car in listofpredictions:
+        if car_class == car['class']:
+            continue
+        dist = rect_distance([car["x1"], car["y1"], car["x2"], car["y2"]], coordinates)
+        if int(dist) == 0:
+            return False
+    return True
+
+
+def rect_distance(rect1, rect2):
+    x1, y1, x1b, y1b = rect1
+    x2, y2, x2b, y2b = rect2
+    left = x2b < x1
+    right = x1b < x2
+    bottom = y2b < y1
+    top = y1b < y2
+    if top and left:
+        return dist(x1, y1b, x2b, y2)
+    elif left and bottom:
+        return dist(x1, y1, x2b, y2b)
+    elif bottom and right:
+        return dist(x1b, y1, x2, y2b)
+    elif right and top:
+        return dist(x1b, y1b, x2, y2)
+    elif left:
+        return x1 - x2b
+    elif right:
+        return x2 - x1b
+    elif bottom:
+        return y1 - y2b
+    elif top:
+        return y2 - y1b
+    else:
+        return 0
+
+
+def dist(x, y, a, b):
+    """
+    Function to find Euclidean distance
+
+    """
+    return (((x - a) ** 2) + ((y - b) ** 2)) ** 0.5
