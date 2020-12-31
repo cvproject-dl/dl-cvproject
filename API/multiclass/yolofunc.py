@@ -81,6 +81,21 @@ def process_coord(listofpredictions, coordinates, car_class):
 
 
 def rect_distance(rect1, rect2):
+    """
+
+    Args:
+        rect1: Coordinates of rectangle 1 (Image 1)
+        rect2: Coordinates of rectangle 2 (Image 2)
+
+    Returns: Distance between the rectangles
+
+    This function is used to find the distance between two rectangles which
+    helps in removing duplicate detections
+
+    References:
+        https://stackoverflow.com/questions/4978323/how-to-calculate-distance-between-two-rectangles-context-a-game-in-lua
+
+    """
     x1, y1, x1b, y1b = rect1
     x2, y2, x2b, y2b = rect2
     left = x2b < x1
