@@ -50,12 +50,11 @@ def getpred(images, model, chkpt_model):
         results = []
         for (lab, prob) in zip(top_labs[0], top_probs[0]):
             car_info = dict()
+            car_info["confidence"] = float(prob)
             if chkpt_model.strip() == SFCARS_PARAM:
                 car_info["car_details"] = Sfcars.get_item_by_id(idno=int(lab) + 1)
-                car_info["confidence"] = float(prob)
             elif chkpt_model.strip() == INDCARS_PARAM:
                 car_info["car_details"] = Indiacars.get_item_by_id(idno=int(lab) + 1)
-                car_info["confidence"] = float(prob)
             results.append(car_info)
         preds.append(results)
     return preds
