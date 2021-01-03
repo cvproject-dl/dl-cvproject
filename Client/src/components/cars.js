@@ -12,9 +12,11 @@ const useStyles = makeStyles({
         left:'50%'
     },
     root: {
-        maxWidth: 345,
+        width: 345,
         margin:'10px',
-        height:'340px'
+        height:'340px',
+        borderRadius:'8px',
+
       },
       select:{
           margin:'20px auto',
@@ -114,14 +116,14 @@ function Cars() {
                     scrollThreshold={0.8}
                 >
                     
-                <Grid container style={{margin:"10px auto"}}>
+                <Grid container style={{margin:"10px auto"}} >
                     {console.log(cardata)}
                 {cardata.map((it,idx)=>(
                     <Grid item container xs={12} sm={6} md={4} justify="center" alignItems="center" key={idx}>
-                        <Card className={classes.root} >
+                        <Card className={classes.root}>
                         <CardContent>
                         <CardMedia component="img" alt="car image"
-                        image={it.image} style={{borderRadius:"8px",height:'230px',width:'310px'}}/>
+                        image={it.image} style={{borderRadius:"8px",height:'230px'}}/>
                         </CardContent>
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">

@@ -6,9 +6,13 @@ import Cars from './cars';
 import Search from './search'
 import { Gradient } from 'react-gradient';
 
+// const gradients = [
+//   ['#bd19d6', '#ea7d10'],
+//   ['#ff2121', '#25c668'],
+// ];
 const gradients = [
-  ['#bd19d6', '#ea7d10'],
-  ['#ff2121', '#25c668'],
+  ['#6767676', '#808080'],
+  ['#F5F5F5', '#E2E5DE'],
 ];
 
 
@@ -84,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
                 angle="45deg"
                 >
       <div className={classes.root}>
-          <h1 style={{textAlign:"center",color:'white'}}>Car Model Identification</h1>
+          <h1 style={{textAlign:"center"}}>Car Model Identification</h1>
         <AppBar position="static" style={{backgroundColor:'white',borderRadius:'12px'}}>
           <Tabs
             TabIndicatorProps={{style: {background:'black'}}}

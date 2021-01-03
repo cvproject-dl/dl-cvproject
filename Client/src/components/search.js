@@ -6,6 +6,8 @@ import {Box, Button, Grid,Card,CardContent,CardMedia,Typography,FormControl,Sele
 import LoadingOverlay from 'react-loading-overlay';
 import BounceLoader from 'react-spinners/BounceLoader';
 
+
+
 const useStyles = makeStyles({
   dropzone:{
     width:'60%',
@@ -13,9 +15,9 @@ const useStyles = makeStyles({
 
   },
   root: {
-    maxWidth: 345,
+    width: 345,
     margin:'10px',
-    height:'340px'
+    height:'340px',
   }
 });
 
@@ -39,23 +41,20 @@ function Search() {
         method: 'POST',
         body: formData,
       };
+
       const res = await fetch(
         'http://127.0.0.1:5000/predict', options
       )
       const file =await res.json()
         
        setResult(file.predictions)
-       
-       console.log(result);
+       console.log("new api")
+       console.log(file.predictions)
        setLoading(false)
   }
 
- 
-
-
   return (
     <Box component="div" style={{height:'1000vh'}}>
-      
       
       <Grid className={classes.dropzone} container justify='center' alignItems='center'>
       <DropzoneArea
@@ -65,6 +64,7 @@ function Search() {
           onChange={(file)=>{
           setFileInput(file[0])}}
       />
+
       <FormControl variant="outlined" style={{marginTop:'10px',width:'300px',border:'3px solid black',borderRadius:'12px'}}>
         
           <Select
@@ -94,17 +94,24 @@ function Search() {
 
         <Grid container style={{margin:'10px auto'}}>  
         {result.map((it,idx) => (
-          <Grid item container xs={12} sm={3} justify="center" alignItems="center" key={idx}>
+          <React.Fragment>
+          {it.map( (it1, idx1) => (
+          <Grid item container xs={12} sm={4} justify="center" alignItems="center" key={idx1}>
           <Card className={classes.root} >
           <CardContent>
           <CardMedia component="img" alt="car image"
-          image={it.image} style={{borderRadius:"8px",width:'310px',height:'230px'}}/>
+          image={it1.car_details.image} style={{borderRadius:"8px",height:'215px'}}/>
           </CardContent>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">{it.name}</Typography>
+            <Typography gutterBottom variant="h6" component="h2">{it1.car_details.name}</Typography>
+            <Typography gutterBottom variant="h6" component="h2">{(it1.confidence*100).toFixed(2)+"%"}</Typography>
           </CardContent>
           </Card>
           </Grid>
+          
+          ))}
+          <hr style={{width:'90%'}}/>
+          </React.Fragment>
         ))}
         </Grid>
       )}
