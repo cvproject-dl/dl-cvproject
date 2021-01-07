@@ -144,6 +144,6 @@ cython_debug/
 
 
 #Models
-indresnet34classifier.pth
-sfresnet34classifier.pth
+*.pth
+
 yolov5s.pt

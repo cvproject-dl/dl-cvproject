@@ -24,7 +24,7 @@ def load_model(checkpoint_path, chkpt_model):
     if chkpt_model.strip() == SFCARS_PARAM:
         model.fc = nn.Linear(num_ftrs, 196)
     elif chkpt_model.strip() == INDCARS_PARAM:
-        model.fc = nn.Linear(num_ftrs, 120)
+        model.fc = nn.Linear(num_ftrs, 98)
 
     model.load_state_dict(checkpoint['state_dict'])
 
@@ -34,10 +34,10 @@ def load_model(checkpoint_path, chkpt_model):
 def getpred(images, model, chkpt_model):
     model.eval()
     # transforms for the input image
-    loader = transforms.Compose([transforms.Resize((244, 244)),
-                                 transforms.CenterCrop(224),
-                                 transforms.ToTensor(),
-                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+
+    loader = transforms.Compose([transforms.Resize((400, 400)),
+                                transforms.ToTensor(),
+                                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
     preds = []
     for image in images:
         image = loader(image).float()
