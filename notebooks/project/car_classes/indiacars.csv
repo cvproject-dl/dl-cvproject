@@ -1,121 +1,99 @@
-"id","car_name","car_image"
-"1","Audi A3","audi_a3.jpg"
-"2","Audi A4","audi_a4.jpg"
-"3","Audi A6","audi_a6.jpg"
-"4","Audi Q3","audi_q3.jpg"
-"5","Audi Q5","audi_q5.jpg"
-"6","Audi Q7","audi_q7.jpg"
-"7","BMW 3-Series","bmw_3-series.jpg"
-"8","BMW 5-Series","bmw_5-series.jpg"
-"9","BMW 7-Series","bmw_7-series.jpg"
-"10","BMW X1","bmw_x1.jpg"
-"11","BMW X3","bmw_x3.jpg"
-"12","BMW X5","bmw_x5.jpg"
-"13","Chevrolet Beat","chevrolet_beat.jpg"
-"14","Chevrolet Cruze","chevrolet_cruze.jpg"
-"15","Chevrolet Enjoy","chevrolet_enjoy.jpg"
-"16","Chevrolet Sail U-VA","chevrolet_sail_u-va.jpg"
-"17","Chevrolet Spark","chevrolet_spark.jpg"
-"18","Chevrolet Tavera Neo 3","chevrolet_tavera_neo_3.jpg"
-"19","Datsun GO+","datsun_go+.jpg"
-"20","Datsun Go Plus","datsun_go_plus.jpg"
-"21","Datsun Redi-Go","datsun_redi-go.jpg"
-"22","Fiat Grande Punto","fiat_grande_punto.jpg"
-"23","Fiat Linea","fiat_linea.jpg"
-"24","Fiat Punto Evo","fiat_punto_evo.jpg"
-"25","Force One","force_one.jpg"
-"26","Ford EcoSport","ford_ecosport.jpg"
-"27","Ford Endeavour","ford_endeavour.jpg"
-"28","Ford Figo 2015","ford_figo_2015.jpg"
-"29","Ford Figo Aspire","ford_figo_aspire.jpg"
-"30","Honda Accord","honda_accord.jpg"
-"31","Honda Amaze","honda_amaze.jpg"
-"32","Honda Brio","honda_brio.jpg"
-"33","Honda City","honda_city.jpg"
-"34","Honda Jazz","honda_jazz.jpg"
-"35","Hyundai Creta","hyundai_creta.jpg"
-"36","Hyundai Elantra","hyundai_elantra.jpg"
-"37","Hyundai Elite i20","hyundai_elite_i20.jpg"
-"38","Hyundai Eon","hyundai_eon.jpg"
-"39","Hyundai Fluidic Verna","hyundai_fluidic_verna.jpg"
-"40","Hyundai Grand i10","hyundai_grand_i10.jpg"
-"41","Hyundai Santa Fe","hyundai_santa_fe.jpg"
-"42","Hyundai Santro Xing","hyundai_santro_xing.jpg"
-"43","Hyundai Verna 2017","hyundai_verna_2017.jpg"
-"44","Hyundai Xcent","hyundai_xcent.jpg"
-"45","Hyundai i10","hyundai_i10.jpg"
-"46","Hyundai i20","hyundai_i20.jpg"
-"47","Hyundai i20 Active","hyundai_i20_active.jpg"
-"48","Jaguar XF","jaguar_xf.jpg"
-"49","Jeep Compass","jeep_compass.jpg"
-"50","Land Rover Range Rover","land_rover_range_rover.jpg"
-"51","Land Rover Range Rover Evoque","land_rover_range_rover_evoque.jpg"
-"52","Mahindra Bolero","mahindra_bolero.jpg"
-"53","Mahindra KUV100","mahindra_kuv100.jpg"
-"54","Mahindra Quanto","mahindra_quanto.jpg"
-"55","Mahindra Scorpio","mahindra_scorpio.jpg"
-"56","Mahindra Thar","mahindra_thar.jpg"
-"57","Mahindra Verito","mahindra_verito.jpg"
-"58","Mahindra XUV500","mahindra_xuv500.jpg"
-"59","Mahindra Xylo","mahindra_xylo.jpg"
-"60","Maruti Suzuki Alto 800","maruti_suzuki_alto_800.jpg"
-"61","Maruti Suzuki Alto K10","maruti_suzuki_alto_k10.jpg"
-"62","Maruti Suzuki Baleno","maruti_suzuki_baleno.jpg"
-"63","Maruti Suzuki Celerio","maruti_suzuki_celerio.jpg"
-"64","Maruti Suzuki Ciaz","maruti_suzuki_ciaz.jpg"
-"65","Maruti Suzuki Dzire","maruti_suzuki_dzire.jpg"
-"66","Maruti Suzuki Eeco","maruti_suzuki_eeco.jpg"
-"67","Maruti Suzuki Grand Vitara","maruti_suzuki_grand_vitara.jpg"
-"68","Maruti Suzuki Gypsy","maruti_suzuki_gypsy.jpg"
-"69","Maruti Suzuki Ignis","maruti_suzuki_ignis.jpg"
-"70","Maruti Suzuki Omni","maruti_suzuki_omni.jpg"
-"71","Maruti Suzuki S-Cross","maruti_suzuki_s-cross.jpg"
-"72","Maruti Suzuki SX4","maruti_suzuki_sx4.jpg"
-"73","Maruti Suzuki Stingray","maruti_suzuki_stingray.jpg"
-"74","Maruti Suzuki Swift","maruti_suzuki_swift.jpg"
-"75","Maruti Suzuki Swift Dzire","maruti_suzuki_swift_dzire.jpg"
-"76","Maruti Suzuki Vitara Brezza","maruti_suzuki_vitara_brezza.jpg"
-"77","Maruti Suzuki Wagon R","maruti_suzuki_wagon_r.jpg"
-"78","Mercedes-Benz B-Class","mercedes-benz_b-class.jpg"
-"79","Mercedes-Benz C-Class","mercedes-benz_c-class.jpg"
-"80","Mercedes-Benz CLA Class","mercedes-benz_cla_class.jpg"
-"81","Mercedes-Benz E-Class","mercedes-benz_e-class.jpg"
-"82","Mercedes-Benz GLA Class","mercedes-benz_gla_class.jpg"
-"83","Mercedes-Benz S-Class","mercedes-benz_s-class.jpg"
-"84","Nissan Micra","nissan_micra.jpg"
-"85","Nissan Micra Active","nissan_micra_active.jpg"
-"86","Nissan Sunny","nissan_sunny.jpg"
-"87","Nissan Terrano","nissan_terrano.jpg"
-"88","Renault Duster","renault_duster.jpg"
-"89","Renault KWID","renault_kwid.jpg"
-"90","Renault Lodgy","renault_lodgy.jpg"
-"91","Renault Pulse","renault_pulse.jpg"
-"92","Renault Scala","renault_scala.jpg"
-"93","Skoda Rapid","skoda_rapid.jpg"
-"94","Skoda Superb","skoda_superb.jpg"
-"95","Skoda Yeti","skoda_yeti.jpg"
-"96","Tata Aria","tata_aria.jpg"
-"97","Tata Bolt","tata_bolt.jpg"
-"98","Tata Hexa","tata_hexa.jpg"
-"99","Tata Indica V2","tata_indica_v2.jpg"
-"100","Tata Indica Vista","tata_indica_vista.jpg"
-"101","Tata Indica eV2","tata_indica_ev2.jpg"
-"102","Tata Indigo eCS","tata_indigo_ecs.jpg"
-"103","Tata Nano","tata_nano.jpg"
-"104","Tata Nano GenX","tata_nano_genx.jpg"
-"105","Tata Safari","tata_safari.jpg"
-"106","Tata Safari Storme","tata_safari_storme.jpg"
-"107","Tata Sumo Gold","tata_sumo_gold.jpg"
-"108","Tata Tiago","tata_tiago.jpg"
-"109","Tata Tigor","tata_tigor.jpg"
-"110","Tata Zest","tata_zest.jpg"
-"111","Toyota Camry","toyota_camry.jpg"
-"112","Toyota Corolla Altis","toyota_corolla_altis.jpg"
-"113","Toyota Etios Liva","toyota_etios_liva.jpg"
-"114","Toyota Fortuner","toyota_fortuner.jpg"
-"115","Toyota Innova","toyota_innova.jpg"
-"116","Toyota Innova Crysta","toyota_innova_crysta.jpg"
-"117","Volkswagen Ameo","volkswagen_ameo.jpg"
-"118","Volkswagen Jetta","volkswagen_jetta.jpg"
-"119","Volkswagen Polo","volkswagen_polo.jpg"
-"120","Volkswagen Vento","volkswagen_vento.jpg"
+Car Name,Image,Fuel Type,Fuel Tank Capacity,Seating Capacity,Body Type,Tansmission Type
+Chevrolet Beat,chevrolet_beat.jpg,Petrol,35,5,Hatchback,Manual
+Chevrolet Cruze,chevrolet_cruze.jpg,Diesel,60,5,Sedan,Manual
+Chevrolet Enjoy,chevrolet_enjoy.jpg,Petrol,50,7,MUV,Manual
+Chevrolet Sail U-VA,chevrolet_sail_u-va.jpg,Petrol,42,5,Hatchback,Manual
+Chevrolet Spark,chevrolet_spark.jpg,Petrol,38,5,Hatchback,Manual
+Chevrolet Tavera Neo 3,chevrolet_tavera_neo_3.jpg,Diesel,55,10,MUV,Manual
+Datsun Redi-Go,datsun_redi-go.jpg,Petrol,28,5,Hatchback,Automatic
+Fiat Grande Punto,fiat_grande_punto.jpg,Petrol,45,5,Hatchback,Manual
+Fiat Linea,fiat_linea.jpg,Petrol,45,5,Sedan,Manual
+Fiat Punto Evo,fiat_punto_evo.jpg,Petrol,45,5,Hatchback,Manual
+Force One,force_one.jpg,Diesel,70,7,SUV,Manual
+Ford EcoSport,ford_ecosport.jpg,Diesel/Petrol,52,5,SUV,Manual
+Ford Endeavour,ford_endeavour.jpg,Diesel,80,7,SUV,Automatic
+Ford Figo 2015,ford_figo_2015.jpg,Petrol/Diesel,45,5,Hatchback,Manual
+Ford Figo Aspire,ford_figo_aspire.jpg,Diesel,40,5,Sedan,Manual
+Honda Accord,honda_accord.jpg,Petrol,60,5,Hybrid,Automatic
+Honda Amaze,honda_amaze.jpg,Diesel,35,5,Sedan,Automatic
+Honda Brio,honda_brio.jpg,Petrol,35,5,Hatchback,Manual/Automatic
+Honda City,honda_city.jpg,Diesel,40,5,Sedan,Manual
+Honda Jazz,honda_jazz.jpg,Petrol,40,5,Hatchback,Automatic
+Hyundai Creta,hyundai_creta.jpg,Diesel,50,5,SUV,Automatic
+Hyundai Elantra,hyundai_elantra.jpg,Diesel,50,5,Sedan,Automatic
+Hyundai Elite i20,hyundai_elite_i20.jpg,Petrol,37,5,Hatchback,Automatic
+Hyundai Eon,hyundai_eon.jpg,Petrol/LPG,32,5,Hatchback,Manual
+Hyundai Fluidic Verna,hyundai_fluidic_verna.jpg,Diesel/Petrol,45,5,Sedan,Automatic
+Hyundai Grand i10,hyundai_grand_i10.jpg,Petrol,43,5,Hatchback,Manual
+Hyundai Santa Fe,hyundai_santa_fe.jpg,Diesel,64,7,SUV,Manual/Automatic
+Hyundai Santro Xing,hyundai_santro_xing.jpg,Petrol,35,5,Hatchback,Manual
+Hyundai Verna 2017,hyundai_verna_2017.jpg,Petrol,45,5,Sedan,Manual
+Hyundai Xcent,hyundai_xcent.jpg,Petrol,43,5,Sedan,Manual
+Hyundai i10,hyundai_i10.jpg,Petrol,35,5,Hatchback,Manual
+Hyundai i20,hyundai_i20.jpg,Petrol,37,5,Hatchback,Automatic
+Hyundai i20 Active,hyundai_i20_active.jpg,Petrol,45,5,Hatchback,Manual
+Jaguar XF,jaguar_xf.jpg,Petrol,66,5,Sedan,Automatic
+Jeep Compass,jeep_compass.jpg,Diesel,60,5,SUV,Automatic
+Land Rover Range Rover,land_rover_range_rover.jpg,Diesel/Petrol,105,5,SUV,Automatic
+Land Rover Range Rover Evoque,land_rover_range_rover_evoque.jpg,Petrol,66,5,SUV,Automatic
+Mahindra Bolero,mahindra_bolero.jpg,Diesel,60,7,SUV,Manual
+Mahindra KUV100,mahindra_kuv100.jpg,Petrol,35,6,Hatchback,Manual
+Mahindra Quanto,mahindra_quanto.jpg,Diesel,55,7,SUV,Manual
+Mahindra Scorpio,mahindra_scorpio.jpg,Diesel,60,7,SUV,Manual
+Mahindra Thar,mahindra_thar.jpg,Diesel,57,4,SUV,Automatic
+Mahindra Verito,mahindra_verito.jpg,Petrol,50,5,Sedan,Manual
+Mahindra XUV500,mahindra_xuv500.jpg,Diesel,70,7,SUV,Automatic
+Mahindra Xylo,mahindra_xylo.jpg,Diesel,55,8,MUV,Manual
+Maruti Suzuki Alto 800,maruti_suzuki_alto_800.jpg,CNG,60,5,Hatchback,Manual
+Maruti Suzuki Alto K10,maruti_suzuki_alto_k10.jpg,Petrol,35,5,Hatchback,Manual
+Maruti Suzuki Baleno,maruti_suzuki_baleno.jpg,Petrol,37,5,Hatchback,Automatic
+Maruti Suzuki Celerio,maruti_suzuki_celerio.jpg,CNG,60,5,Hatchback,Manual
+Maruti Suzuki Ciaz,maruti_suzuki_ciaz.jpg,Petrol,43,5,Sedan,Automatic
+Maruti Suzuki Dzire,maruti_suzuki_dzire.jpg,Petrol,37,5,Sedan,Automatic
+Maruti Suzuki Eeco,maruti_suzuki_eeco.jpg,CNG,65,5,Minivan,Manual
+Maruti Suzuki Grand Vitara,maruti_suzuki_grand_vitara.jpg,Diesel,66,5,SUV,Manual
+Maruti Suzuki Gypsy,maruti_suzuki_gypsy.jpg,Petrol,40,8,SUV,Manual
+Maruti Suzuki Ignis,maruti_suzuki_ignis.jpg,Petrol,32,5,Hatchback,Automatic
+Maruti Suzuki Omni,maruti_suzuki_omni.jpg,Petrol,36,5,Minivan,Manual
+Maruti Suzuki S-Cross,maruti_suzuki_s-cross.jpg,Petrol,48,5,SUV,Automatic
+Maruti Suzuki SX4,maruti_suzuki_sx4.jpg,Petrol,50,5,Sedan,Manual
+Maruti Suzuki Stingray,maruti_suzuki_stingray.jpg,Petrol,35,5,Hatchback,Manual
+Maruti Suzuki Swift,maruti_suzuki_swift.jpg,Petrol,37,5,Hatchback,Automatic
+Maruti Suzuki Swift Dzire,maruti_suzuki_swift_dzire.jpg,Petrol,37,5,Sedan,Automatic
+Maruti Suzuki Vitara Brezza,maruti_suzuki_vitara_brezza.jpg,Petrol,48,5,SUV,Automatic
+Maruti Suzuki Wagon R,maruti_suzuki_wagon_r.jpg,Petrol,32,5,Hatchback,Automatic
+Nissan Micra,nissan_micra.jpg,Petrol,41,5,Hatchback,Automatic
+Nissan Micra Active,nissan_micra_active.jpg,Petrol,41,5,Hatchback,Manual
+Nissan Sunny,nissan_sunny.jpg,Petrol,41,5,Sedan,Manual
+Nissan Terrano,nissan_terrano.jpg,Diesel,50,5,SUV,Manual
+Renault Duster,renault_duster.jpg,Petrol,50,5,SUV,Automatic
+Renault KWID,renault_kwid.jpg,Petrol,28,5,Hatchback,Automatic
+Renault Lodgy,renault_lodgy.jpg,Diesel,50,8,MUV,Manual
+Renault Pulse,renault_pulse.jpg,Petrol,41,5,Hatchback,Manual
+Skoda Rapid,skoda_rapid.jpg,Petrol,55,5,Sedan,Automatic
+Skoda Superb,skoda_superb.jpg,Petrol,66,5,Sedan,Automatic
+Skoda Yeti,skoda_yeti.jpg,Diesel,55,5,SUV,Manual
+Tata Aria,tata_aria.jpg,Diesel,65,7,MUV,Automatic
+Tata Bolt,tata_bolt.jpg,Petrol,44,5,Hatchback,Manual
+Tata Hexa,tata_hexa.jpg,Diesel,60,7,SUV,Manual
+Tata Indica Vista,tata_indica_vista.jpg,Diesel,37,5,Hatchback,Manual
+Tata Indica eV2,tata_indica_ev2.jpg,Petrol,37,5,Hatchback,Manual
+Tata Indigo eCS,tata_indigo_ecs.jpg,Petrol,42,5,Sedan,Manual
+Tata Nano,tata_nano.jpg,Diesel,15,4,Hatchback,Manual
+Tata Nano GenX,tata_nano_genx.jpg,Petrol,24,4,Hatchback,Manual
+Tata Safari,tata_safari.jpg,Diesel,65,7,SUV,Manual
+Tata Safari Storme,tata_safari_storme.jpg,Diesel,63,5,SUV,Manual
+Tata Sumo Gold,tata_sumo_gold.jpg,Diesel,65,7,SUV,Manual
+Tata Tiago,tata_tiago.jpg,Petrol,35,5,Hatchback,Automatic
+Tata Tigor,tata_tigor.jpg,Petrol,35,5,Sedan,Automatic
+Tata Zest,tata_zest.jpg,Petrol,44,5,Sedan,Manual
+Toyota Camry,toyota_camry.jpg,Petrol,50,5,Sedan,Automatic
+Toyota Corolla Altis,toyota_corolla_altis.jpg,Petrol,55,5,Sedan,Manual
+Toyota Etios Liva,toyota_etios_liva.jpg,Petrol,45,5,Hatchback,Manual
+Toyota Fortuner,toyota_fortuner.jpg,Diesel,80,7,SUV,Automatic
+Toyota Innova,toyota_innova.jpg,Diesel,55,7,SUV,Automatic
+Toyota Innova Crysta,toyota_innova_crysta.jpg,Diesel,55,7,SUV,Automatic
+Volkswagen Ameo,volkswagen_ameo.jpg,Petrol,45,5,Sedan,Manual
+Volkswagen Jetta,volkswagen_jetta.jpg,Petrol,55,5,Sedan,Manual
+Volkswagen Polo,volkswagen_polo.jpg,Petrol,45,5,Hatchback,Automatic
+Volkswagen Vento,volkswagen_vento.jpg,Petrol,55,5,Sedan,Automatic
