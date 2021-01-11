@@ -5,7 +5,7 @@ Delete this package before deploying.
 """
 
 from flask import Flask
-from models.initdb import db
+from dbmodels.initdb import db
 from seeder import sfcars_seeder, indiacars_seeder
 
 
